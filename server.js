@@ -76,7 +76,7 @@ app.get('/edit/:ipid',function(req,res){
 	var data = readJSON();
 	var node = data["ip"+req.params.ipid]
 	var ipaddress = node.address;
-	var description = node.description 
+	var description = node.description
 	var html = '<html><body>'
 	html += head
 	html += '<form action = "/processPost/' + req.params.ipid + '" method = "POST">'
@@ -84,7 +84,7 @@ app.get('/edit/:ipid',function(req,res){
         html += '<input type="text" name="ipaddress" class="form-control" id="ipAddress" value="' + ipaddress + '"></div>'
         html += '<div class="form-group"><label for="description" class="col-sm-2 control-label">Description</label>'
         html += '<input type="text" name="description" class="form-control" id="description" value="' + description + '"></div>'
-        html += '<div class="form-group"><button type="submit" class="btn btn-primary">Edit</button></div>'
+        html += '<div class="form-group"><button type="submit" class="btn btn-primary">Change</button></div>'
         html += '</body></html>'
         res.send(html);
 })
@@ -107,7 +107,7 @@ function saveNode(id,node){
 	var data = readJSON();
 	data["ip" + id] = node;
 	writeJSON(data);
-}		
+}
 
 function saveNewNode(node){
 	var data = readJSON();
@@ -119,6 +119,6 @@ function saveNewNode(node){
 var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
-   
+
    console.log("Example app listening at http://%s:%s", host, port)
 })
