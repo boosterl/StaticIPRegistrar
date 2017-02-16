@@ -3,6 +3,7 @@ var app = express();
 var fs = require("fs");
 var bodyParser = require('body-parser');
 
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var head = '<head><link rel="stylesheet" href="/css/bootstrap.min.css" /><meta name="viewport" content="width=device-width, initial-scale=1"/></head>'
 
