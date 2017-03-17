@@ -1,7 +1,7 @@
 # StaticIPRegistrar
 A simple Web Application written in NodeJS to register static IP's in your network.
 
-#Installation
+# Installation
 First you need to have a recent version of NodeJS and npm installed for your platform. Instructions: https://nodejs.org/en/download/
 
 # Usage
