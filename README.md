@@ -14,5 +14,11 @@ npm install
 Then just run the server:
 
 ```
-node server.js
+node ./bin/www
+```
+
+or:
+
+```
+npm start
 ```
