@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  
+    table.table
+        thead
+            tr
+                th IP Address
+                th Description
+                th
+                th
+                th
+                th
+        tbody
+            each host in data
+                tr
+                    td #{host.address}
+                    td #{host.description}
+                    td
+                        a(href="/remove/" + host.id) Delete
+                    td
+                        a(href="/edit/" + host.id) Edit
+                    td
+                        a(href="/up/" + host.id) Move Up
+                    td
+                        a(href="/down/" + host.id) Move Down
+    a.btn.btn-default(href='/create') Add Node
+      

@@ -1,12 +1,23 @@
 {
   "name": "staticipregistrar",
-  "version": "1.0.0",
-  "description": "A simple Web Application written in NodeJS to register static IP's in your network.",
-  "main": "server.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./bin/www"
   },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "node-persist": "*",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2",
+    "validator": "^8.0.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/boosterl/StaticIPRegistrar.git"
@@ -17,9 +28,5 @@
     "url": "https://github.com/boosterl/StaticIPRegistrar/issues"
   },
   "homepage": "https://github.com/boosterl/StaticIPRegistrar#readme",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "validator": "^7.0.0"
-  }
+  "description": ""
 }

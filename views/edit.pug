@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    form(action='/' + action , method='POST')
+        div.form-group
+            label.col-sm-2.control-label(for='ipAddress') IP Address
+            input#ipAddress.form-control(type='text', name='ipaddress', placeholder='IP Address', value=ipAddress)
+        div.form-group
+            label.col-sm-2.control-label(for='description') Description
+            input#description.form-control(type='text', name='description', placeholder='Description', value=description)
+        div.form-group
+            input#id.form-control(type='hidden',name='id',value=id)
+        div.form-group
+            button.btn.btn-primary(type='submit') #{action}
